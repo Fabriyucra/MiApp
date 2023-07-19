@@ -26,7 +26,15 @@ public class ControladorLogin {
 	public ControladorLogin(ServicioLogin servicioLogin){
 		this.servicioLogin = servicioLogin;
 	}
-
+// ejemplo
+	@RequestMapping("/probandojsp")
+	public ModelAndView probandoJSP(){ //ModelAndView es un objeto que sirve para hablar con JSP, le decimos que vista tiene que renderisar
+		ModelMap modelo = new ModelMap(); //instanciar un objeto
+		String[] windows = new String[]{"Windows XP", "Windows Vista", "Windows 7","Windows 8", "Windows 10" };
+		modelo.put("numeroRandom", Math.random());
+		modelo.put("windows", windows);
+		return new ModelAndView("probandojsp", modelo);// modelo son los datos que se van enviar a la vista
+	}
 	// Este metodo escucha la URL localhost:8080/NOMBRE_APP/login si la misma es invocada por metodo http GET
 	@RequestMapping("/login")
 	public ModelAndView irALogin() {
