@@ -28,6 +28,16 @@
         <h2>Segui participando</h2><p>(<%= num %>)</p>
         <%}
         %>
+        <ul>
+            <%
+            String[] versions = (String[]) request.getAttribute("windows");
+            for (String version : versions){
+            %>
+            <li><%= version%> </li>
+            <%
+                }
+            %>
+        </ul>
     </section>
 
 </main>

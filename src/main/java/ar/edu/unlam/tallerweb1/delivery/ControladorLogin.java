@@ -30,7 +30,7 @@ public class ControladorLogin {
 	@RequestMapping("/probandojsp")
 	public ModelAndView probandoJSP(){ //ModelAndView es un objeto que sirve para hablar con JSP, le decimos que vista tiene que renderisar
 		ModelMap modelo = new ModelMap(); //instanciar un objeto
-		String[] windows = new String[]{"Windows XP", "Windows Vista", "Windows 7","Windows 8", "Windows 10" };
+		String[] windows = new String[]{"Windows XP", "Windows Vista", "Windows 7","Windows 8", "Windows 10" };// esta harcodeado luego se pedira la servico y despues al repositorio q consultara y devolvera algo de la base de datos
 		modelo.put("numeroRandom", Math.random());
 		modelo.put("windows", windows);
 		return new ModelAndView("probandojsp", modelo);// modelo son los datos que se van enviar a la vista
