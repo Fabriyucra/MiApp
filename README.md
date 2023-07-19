@@ -2,7 +2,9 @@
 Aplicación para aprender a usar Spring
 
 carpeta "delivery" es donde estan los Controladores
+
 carpeta "domain" es donde estan los Servicios 
+
 carpeta "infrastructure" carpeta de Repositorio, termina siendo una clase que
 tiene diferentes metodos y cada uno de llo ejecuta una query sobre una base de datos.(consulta encapsulada en un metodo)
 
