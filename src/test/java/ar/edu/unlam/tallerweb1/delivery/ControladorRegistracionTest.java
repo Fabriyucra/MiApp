@@ -51,7 +51,7 @@ public class ControladorRegistracionTest {
     private void dadoQueNoExisteElUsuario() {
     }
     private ModelAndView cuandoMeRegistro(String mail, String password) {
-        return controladorRegistracion.registrarUsuario(mail, password);
+        return controladorRegistracion.registrarUsuario(mail, password);//es cuando se usa el controller, desde aca voy a crear el controller
     }
     private void entoncesElRegistroEsExitosio(ModelAndView mav) {
         assertThat(mav.getViewName()).isEqualTo("login");
